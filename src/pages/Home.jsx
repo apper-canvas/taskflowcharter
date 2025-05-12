@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { toast } from 'react-toastify';
 import MainFeature from '../components/MainFeature';
 import getIcon from '../utils/iconUtils';
 
@@ -41,7 +40,6 @@ const Home = ({ darkMode }) => {
     
     setBoards([...boards, newBoard]);
     setSelectedBoard(newBoard.id);
-    toast.success(`Board "${newBoardTitle}" created!`);
   };
 
   const handleDeleteBoard = (boardId) => {
@@ -53,7 +51,6 @@ const Home = ({ darkMode }) => {
       setSelectedBoard(updatedBoards.length > 0 ? updatedBoards[0].id : null);
     }
     
-    toast.info("Board deleted");
   };
 
   const dismissWelcome = () => {

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import getIcon from './utils/iconUtils';
@@ -57,19 +55,6 @@ function App() {
       </main>
 
       <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme={darkMode ? "dark" : "light"}
-        className="!font-sans"
-      />
-    </div>
   );
 }
 

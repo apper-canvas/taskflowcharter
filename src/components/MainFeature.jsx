@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { toast } from 'react-toastify';
 import getIcon from '../utils/iconUtils';
 
 // Icon declarations
@@ -78,14 +77,12 @@ const MainFeature = ({ boardId, darkMode }) => {
     setColumns([...columns, newColumn]);
     setNewColumnTitle('');
     setShowColumnForm(false);
-    toast.success('Column added');
   };
 
   // Handle deleting a column
   const handleDeleteColumn = (columnId) => {
     if (confirm('Are you sure you want to delete this column? All cards will be lost.')) {
       setColumns(columns.filter(col => col.id !== columnId));
-      toast.info('Column deleted');
     }
   };
 
@@ -148,7 +145,6 @@ const MainFeature = ({ boardId, darkMode }) => {
     
     setActiveColumn(null);
     setEditingCard(null);
-    toast.success(editingCard ? 'Card updated' : 'Card added');
   };
 
   // Handle deleting a card
@@ -163,7 +159,6 @@ const MainFeature = ({ boardId, darkMode }) => {
       return column;
     }));
     
-    toast.info('Card deleted');
   };
 
   // Handle card form input changes
@@ -210,7 +205,6 @@ const MainFeature = ({ boardId, darkMode }) => {
       });
       
       setColumns(updatedColumns);
-      toast.success('Card moved');
     }
     
     // Reset drag state

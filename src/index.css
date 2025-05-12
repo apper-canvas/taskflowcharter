@@ -98,9 +98,6 @@
   }
 }
 
-/* Import react-toastify CSS */
-@import 'react-toastify/dist/ReactToastify.css';
-
 /* Kanban board custom styles */
 .kanban-column {
   @apply min-w-[280px] max-w-[280px] sm:min-w-[320px] sm:max-w-[320px] bg-surface-100 dark:bg-surface-800 rounded-xl p-3 h-[calc(100vh-180px)] flex flex-col overflow-hidden;
