@@ -115,7 +115,7 @@
 }
 
 .kanban-card {
-  @apply bg-white dark:bg-surface-700 p-3 rounded-lg shadow-sm border border-surface-200 dark:border-surface-600 mb-2 hover:shadow-md transition-shadow cursor-grab;
+  @apply bg-white dark:bg-surface-700 p-3 rounded-lg shadow-sm border border-surface-200 dark:border-surface-600 mb-2 hover:shadow-md transition-shadow cursor-grab select-none touch-none;
 }
 
 /* Task card animation */
